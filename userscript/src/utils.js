@@ -87,3 +87,28 @@ export async function awaitElement(selector) {
         delayedProbe();
     });
 }
+
+// 复制的方法
+export function copyUrl(text) {
+  if (text) {
+    var input = document.createElement('input');
+    document.body.appendChild(input);
+    input.setAttribute('value', text);
+    input.select();
+    document.execCommand('copy'); // 执行浏览器复制命令
+    if (document.execCommand('copy')) {
+      document.execCommand('copy');
+      console.log('复制成功', text);
+      alert('当天修改bug复制成功');
+    }
+    document.body.removeChild(input);
+  } else {
+    alert('暂无修改bug');
+  }
+}
+
+// 数组去重
+export function noRepeat(arr) {
+  var newArr = [...new Set(arr)]; //利用了Set结构不能接收重复数据的特点
+  return newArr;
+}

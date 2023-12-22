@@ -6,3 +6,52 @@
   cursor: pointer;
   font-weight: 600;
 }
+
+
+
+.animation {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  animation-name: animation;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite
+}
+
+@keyframes animation {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 100vh);
+    opacity: 0;
+  }
+}
+
+.shadeWrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}

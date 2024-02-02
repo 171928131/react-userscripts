@@ -1,4 +1,4 @@
-.button {
+.scybutton {
   color: #61677c;
   font-weight: bold;
   box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
@@ -6,21 +6,28 @@
   cursor: pointer;
   font-weight: 600;
 }
-
-
+#searchGo {
+  background-color: #841b15;
+}
+#searchGo:hover {
+  background-color: #ab3d34;
+}
 
 .animation {
   position: fixed;
   top: 0px;
-  left: 0px;
   z-index: 2000;
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   opacity: 0;
   animation-name: animation;
   animation-timing-function: linear;
-  animation-iteration-count: infinite
+  animation-iteration-count: infinite;
+}
+
+.scybox {
+  animation: rotate 12s linear infinite;
 }
 
 @keyframes animation {
@@ -38,8 +45,17 @@
   }
 
   100% {
-    transform: translate(0, 100vh);
+    transform: translate(-20vw, 100vh);
     opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -54,4 +70,86 @@
   align-items: center;
   justify-content: center;
   pointer-events: none;
+}
+
+.scyswitch {
+  position: absolute;
+  top: 14px;
+  left: 24px;
+  display: flex;
+}
+
+.scyinput {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.scylabel {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 44px;
+  height: 22px;
+  background: grey;
+  display: block;
+  border-radius: 11px;
+  position: relative;
+}
+
+.scylabel:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.scyinput:checked + .scylabel {
+  background: #f2b439;
+}
+
+.scyinput:checked + .scylabel:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.scylabel:active:after {
+  width: 22px;
+}
+
+.btn-link {
+  position: relative;
+}
+
+.btn-link:hover .scyIcon {
+  animation-name: move;
+}
+
+.scyIcon {
+  position: absolute;
+  left: calc(50% - 12px);
+  top: -24px;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  max-width: max-content;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0.1;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(0) translate(0, -120px);
+  }
 }

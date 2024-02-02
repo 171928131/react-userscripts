@@ -63,15 +63,14 @@ function App() {
     });
   }
 
-  const setButton = () => {
-    // 解决
-    const a1 = document.getElementsByClassName('icon-bug-resolve');
+  const setButton = (classname, iconUrl) => {
+    const a1 = document.getElementsByClassName(classname);
     if (a1 && a1[0]) {
       const icon = <>
         {
           Array.from({ length: 10 }).map((e, index) => <img
             className='scyIcon'
-            src={require('./icon8.png')}
+            src={require(`./${iconUrl}.png`)}
             alt=''
             style={{
               transform: `rotate(${Math.random() * 100 - 50}deg)`,
@@ -83,70 +82,22 @@ function App() {
       </>
       ReactDOM.render(icon, a1[0]);
     }
-    // 指派
-    const a2 = document.getElementsByClassName('icon-bug-assignTo');
-    if (a2 && a2[0]) {
-      const icon = <>
-        {
-          Array.from({ length: 10 }).map((e, index) => <img
-            className='scyIcon'
-            src={require('./icon4.png')}
-            alt=''
-            style={{
-              transform: `rotate(${Math.random() * 100 - 50}deg)`,
-              animationDuration: `${Math.random() * 1 + 1}s`,
-              animationDelay: `${Math.random() * 4 - 1}s`,
-            }}
-          />)
-        }
-      </>
-      ReactDOM.render(icon, a2[0]);
-    }
-    // 激活
-    const a3 = document.getElementsByClassName('icon-bug-activate');
-    if (a3 && a3[0]) {
-      const icon = <>
-        {
-          Array.from({ length: 10 }).map((e, index) => <img
-            className='scyIcon'
-            src={require('./cry.png')}
-            alt=''
-            style={{
-              transform: `rotate(${Math.random() * 100 - 50}deg)`,
-              animationDuration: `${Math.random() * 1 + 1}s`,
-              animationDelay: `${Math.random() * 4 - 1}s`,
-            }}
-          />)
-        }
-      </>
-      ReactDOM.render(icon, a3[0]);
-    }
-    // 关闭
-    const a4 = document.getElementsByClassName('icon-bug-close');
-    if (a4 && a4[0]) {
-      const icon = <>
-        {
-          Array.from({ length: 10 }).map((e, index) => <img
-            className='scyIcon'
-            src={require('./icon10.png')}
-            alt=''
-            style={{
-              transform: `rotate(${Math.random() * 100 - 50}deg)`,
-              animationDuration: `${Math.random() * 1 + 1}s`,
-              animationDelay: `${Math.random() * 4 - 1}s`,
-            }}
-          />)
-        }
-      </>
-      ReactDOM.render(icon, a4[0]);
-    }
   }
 
   useEffect(() => {
     setTheme();
     setBugCopy();
     setFlag(localStorage.getItem('shade'))
-    setButton()
+    // 解决
+    setButton('icon-bug-resolve', 'icon8');
+    // 指派
+    setButton('icon-bug-assignTo', 'icon4');
+    // 激活
+    setButton('icon-bug-activate', 'cry');
+    // 关闭
+    setButton('icon-bug-close', 'icon10');
+    // 确认
+    setButton('icon-bug-confirmBug', 'icon3');
   }, []);
 
   return ReactDOM.createPortal(

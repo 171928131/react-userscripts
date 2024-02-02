@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Copy Zentao BUG
 // @namespace    http://tampermonkey.net/
-// @version      0.4
+// @version      0.5
 // @description  禅道每日bug一键复制
 // @author       Sun chen yang
 // @match        http://dev.veilytech.com/zentao/*

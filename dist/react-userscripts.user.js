@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Copy Zentao BUG
 // @namespace    http://tampermonkey.net/
-// @version      0.5
+// @version      0.7
 // @description  禅道每日bug一键复制
 // @author       Sun chen yang
 // @match        http://dev.veilytech.com/zentao/*
@@ -9221,12 +9221,53 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ 810:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+var map = {
+	"./cry.png": 991,
+	"./icon1.png": 539,
+	"./icon10.png": 536,
+	"./icon11.png": 979,
+	"./icon2.png": 148,
+	"./icon3.png": 619,
+	"./icon4.png": 206,
+	"./icon5.png": 929,
+	"./icon6.png": 78,
+	"./icon7.png": 908,
+	"./icon8.png": 447,
+	"./icon9.png": 934
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 810;
+
+/***/ }),
+
 /***/ 67:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var map = {
 	"./icon1.png": 539,
 	"./icon10.png": 536,
+	"./icon11.png": 979,
 	"./icon2.png": 148,
 	"./icon3.png": 619,
 	"./icon4.png": 206,
@@ -9280,6 +9321,14 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABz
 
 "use strict";
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAxBJREFUWEftVU1rE1EUPXcy+TCxNq0lFCp0KlrqQtEWuqq0BQX/gEhXtogrN1VcCG7diZofIDQFd4qfyy7ahdJCF2YjlgoaoQs/0Ka0+Z6ZJ3deppnJpEmTForQCyHDvPfuPXPuPecRDjjogOvjEMAhA/8PA2LxigbFnASJUQBaWT0pALM0PJdoVU0k5gc0mBiDiRRUpGh8hZO6QixfGoOg+TpFEjQ8N+U5x7k5dGhQrN9CdX4Si5cTKPy+Dj3nPM8gUoBIQSjf0d5zC1C66n6lXkwi8/MNyOwFiAuPufar4TW09T2ioZdx53sSn27ehS94H5upKDJrqAICqCEgHGvMsJEHMr+8+7hwbFiHGtZgiD46E3cxTOLztAYffZNU5YDCHyD/FxYYDkUF/BFADQK+kLeAqct3fEbPy2f1CBA5AbRpaSj+qHwpEtQf97TJUoFYvc39dVPGYIysBMXJjRygZwGzVAGh+CvPXJCD/xmAJ2iK+h97hlUC+DLdaMgat6DBDup/UlPyEoBsA7Ngy2vPBd0JatPPe7ZRidU7k4CY2efKMl2N4bPrVAAwC8b6MgKd9eXWLML8+iydS0zudMzVF0uSRvYhQruQ3U4ZzSJQTAPCAIx8jgZfh+th9gyGSF57Cn3rBtQIEIjC+neGLVVfedJDxyurW1+lUtzhcknLeW1ndM6A84xITozAyLyDkStr2LEajAHZHxWf4CX2ilCnNK1aUVhfQWFzwLUUHUgj0r1U9za0gJi5GQizaxtMoAMI90h/YLOy3TPYLg2LwTiDjaqwAZQy0h+O9qZx7GT5w2iq6evY5ZxcyL5DnKalKLJgsFNCYXZ8YY9BsTc0DYDzidXpGYB2nOzdCUV6Q2sAnPfH7qp5d5EYp9PxhZYAWCwkr35EKHYeSqA5CCzT0sZ7OvvsIh/cAwAe0OJzqKFuS6rVcq2GZftDaTNNQ2877OWWAUgWJkYgSg9Q2hitywQXV/w6fOEPdOGF69bdEwD7KywgMOVQCuOUpyfCWKLBV/dq9WpfADQ3BO7dhwAOnIF/2KQcE0i8EW8AAAAASUVORK5CYII=";
+
+/***/ }),
+
+/***/ 979:
+/***/ (function(module) {
+
+"use strict";
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABRZJREFUWEfFl8tvW0UYxc/Mffr6kThOnNZNE7cIBVRS1H2folWQyoaqFSAhVIkNQl2w5I9AqkQRbJBgUYQESEWi2QLqky6K+lB4tCWN08RpnLiO3/Z9zKCZi127mF6SpjAb27rXc35zzvd91yb4nxfpP/lymqk4/l9zcI5ZxcOPJPbh5F0QpDsBdPXp4dhux94csyR2apJ3ym3fTBEOkadCUK1zzCyyrr27AMTJx0eVQHHPAwoVjobts5s6QTxCoAR/Fb/Peeh0QQIIYXHqkSEaKF4oc2TzDKz7IKAUSCUo4tFg9+aXGYQbAkQCDMcJkvFg8dUKx73cQ+U+wy+WYvNhsKNJir5IMESuwLBU4P8egHFg+q7XdmjnYBh7N0fl5xv5Gq7na22QHdsU0ACGNQPki771Yu1NxbAnFUOm3Gw78N1soQ0nokj0PZ4gEEDkI3JqZZpZYihV/aI7MbFJineKdhZPLEwwNkxlxoUyQ8Qkf+usQICbM77dAkAU5+151q76lgMi+1Xbw1y52RWB6IpnRyhEsYmi7dVdjwUQ5HezfrsIcQHRCSDAxqIGdiYsiEIU789nSziXLbXbUgAIcQEh1sT27h4NdECIOw5vWyeqX3RBryUiEeujm/fla3+EYGvS7yoRY6/BFgjwqFDnacS1N8eH0K/7pxIudDrQcu1xQ2XNAGKzzhhabShqQIi3OqKVv7h/h0IwaZhIUIJfKk2crrioKf7QWxdArcExk2XoHQQgGm97isIyCb7YlMTYQBJoVIHKqjSDex6+LzTxTr4u720PInGxNYqDnoQCIpvnqDd9jNPPJ3B4SwLUs8ErJZQcFwb3QO0meL0K58EyoKogigY9kYTWH8e3i2W89VsNJKT4k7CVlRDfllJk2wStSp3jynNpGAqFt5yFnVsENUyofXFQ3YRbraA+cwtaahRecQVK3yC460CPRqFYYUxcXsEcJ90AQlQ8jjUteJZ/tWUY6bCF+vRVeI4NJZaQAuAMiq5DHxhEYyEDDgp3ZQHq8CiIZoAoCsxEAh//UcD7czZI9NTkDwTYH3TiR68XX3kRzp0baK7kpLhXWAIUVb4XIqoVAnccNLMZsFq5DaCYJvRYDFeXKzgwXb0vf5J5ytoBSoee+ax67RJobFCyufdnQYwQlPgQ9KFNAONgtQqcfA71hWWE0ltATQuqaYJqGu6s1lbGD08NBXvdwxp+8dhR6PrX1ZlboJH+NkB41x7Q+CBQLcJ7kIMSsuS15koe9lIGofS4/Mw8D9xl75qTU5+sC0BucuUNZucWiee48uTG5hFQhaJ+expuMQ9iRUE1Q57WTG2FWynDLZehJwbhNuoF46WzA2KfdQN4l177mVCyy14tgHkMofEJ1K9dahekqAkaHQBRNbRybyzOg1qRonFwyrftSQBEDIySLwmhKjcsedLK9Z+g9CdlN4iaUIdGpDutyndrtXlt35mtnamu2wE52S4eO+pxfEBNa4xwF5U7v7bbsRNAC4elC16juaDtPzOyYQCtjexzR97TQqGTtcwMSCjS5QC1IrLyhQus2TinH5zat+EAzoVXd6uGdd7OL8Pz/MHKqiXQcAxU06EaOlzbBlHJMePA2W82HEDOgfNHPlXM0NtutQq30ZAPHjmQ/up7p1bLmIemuv6BPVERPjoe+OXX067rfq6aRttiZtuwy2UB0lN8QwFaQCIOwslxxvACZ65JNeWEtvvMhX8a9U/UBWt9fvS6/0/faYoqogFHgwAAAABJRU5ErkJggg==";
 
 /***/ }),
 
@@ -10021,11 +10070,12 @@ var App_update = injectStylesIntoStyleTag_default()(App/* default */.Z, App_opti
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(184);
 ;// CONCATENATED MODULE: ./src/App.js
-function App_App(){var _useState=(0,react.useState)(false),_useState2=_slicedToArray(_useState,2),flag=_useState2[0],setFlag=_useState2[1];var setTheme=function setTheme(){document.body.style.backgroundImage='url(https://s11.ax1x.com/2024/02/02/pFQk4H0.jpg)';document.body.style.backgroundSize='326px';document.body.style.backgroundRepeat='repeat-y';document.body.style.backgroundPosition='right';document.body.style.backgroundColor='#FEF7EF';var mainhead=document.getElementById('mainHeader');mainhead.style.backgroundColor='#B93F44';mainhead.style.background='#B93F44';};var setBugCopy=function setBugCopy(){console.log('setBugCopy: ');var a1=document.getElementsByClassName('dynamic');Array.prototype.map.call(a1,function(fatherItem){var a2=fatherItem.getElementsByClassName('label label-id');var a3=Array.prototype.map.call(a2,function(el){return el.innerText;});var bugAry=noRepeat(a3);var dynamicDate=fatherItem.getElementsByClassName('dynamic-date');if(dynamicDate[0]&&dynamicDate[0].childNodes.length<=7){var timeline=fatherItem.getElementsByClassName('timeline');var oldButton=document.createElement('div');oldButton.id='copyButton';var Button=bugAry.length===0?/*#__PURE__*/(0,jsx_runtime.jsx)("button",{style:{textAlign:'center',marginTop:5},children:"\u6682\u65E0bug"}):/*#__PURE__*/(0,jsx_runtime.jsxs)("button",{style:{marginTop:5,textAlign:'center'},onClick:function onClick(){return copyUrl(bugAry.join(','));},children:["\u5F53\u5929\u4FEE\u6539\u7684bug",/*#__PURE__*/(0,jsx_runtime.jsx)("br",{}),"(",bugAry.length,")"]});dynamicDate[0].style.height='105px';timeline[0].style.marginBottom='56px';react_dom.render(Button,oldButton);dynamicDate[0].appendChild(oldButton);}});};var setButton=function setButton(){// 解决
-var a1=document.getElementsByClassName('icon-bug-resolve');if(a1&&a1[0]){var icon=/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:Array.from({length:10}).map(function(e,index){return/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"scyIcon",src:__webpack_require__(447),alt:"",style:{transform:"rotate(".concat(Math.random()*100-50,"deg)"),animationDuration:"".concat(Math.random()*1+1,"s"),animationDelay:"".concat(Math.random()*4-1,"s")}});})});react_dom.render(icon,a1[0]);}// 指派
-var a2=document.getElementsByClassName('icon-bug-assignTo');if(a2&&a2[0]){var _icon=/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:Array.from({length:10}).map(function(e,index){return/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"scyIcon",src:__webpack_require__(206),alt:"",style:{transform:"rotate(".concat(Math.random()*100-50,"deg)"),animationDuration:"".concat(Math.random()*1+1,"s"),animationDelay:"".concat(Math.random()*4-1,"s")}});})});react_dom.render(_icon,a2[0]);}// 激活
-var a3=document.getElementsByClassName('icon-bug-activate');if(a3&&a3[0]){var _icon2=/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:Array.from({length:10}).map(function(e,index){return/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"scyIcon",src:__webpack_require__(991),alt:"",style:{transform:"rotate(".concat(Math.random()*100-50,"deg)"),animationDuration:"".concat(Math.random()*1+1,"s"),animationDelay:"".concat(Math.random()*4-1,"s")}});})});react_dom.render(_icon2,a3[0]);}// 关闭
-var a4=document.getElementsByClassName('icon-bug-close');if(a4&&a4[0]){var _icon3=/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:Array.from({length:10}).map(function(e,index){return/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"scyIcon",src:__webpack_require__(536),alt:"",style:{transform:"rotate(".concat(Math.random()*100-50,"deg)"),animationDuration:"".concat(Math.random()*1+1,"s"),animationDelay:"".concat(Math.random()*4-1,"s")}});})});react_dom.render(_icon3,a4[0]);}};(0,react.useEffect)(function(){setTheme();setBugCopy();setFlag(localStorage.getItem('shade'));setButton();},[]);return/*#__PURE__*/react_dom.createPortal(/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"scyswitch",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",className:"scyinput",id:"switch",checked:flag==='1'}),/*#__PURE__*/(0,jsx_runtime.jsx)("label",{for:"switch",className:"scylabel",onClick:function onClick(){var oldflag=localStorage.getItem('shade');var newFlag=oldflag==='1'?'0':'1';setFlag(newFlag);localStorage.setItem('shade',newFlag);},children:"Toggle"})]}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"shadeWrapper",style:{display:flag==='1'?'initial':'none'},children:Array.from({length:20}).map(function(e,index){return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"animation",style:{// top: `${Math.random() * 100}vh`,
+function App_App(){var _useState=(0,react.useState)(false),_useState2=_slicedToArray(_useState,2),flag=_useState2[0],setFlag=_useState2[1];var setTheme=function setTheme(){document.body.style.backgroundImage='url(https://s11.ax1x.com/2024/02/02/pFQk4H0.jpg)';document.body.style.backgroundSize='326px';document.body.style.backgroundRepeat='repeat-y';document.body.style.backgroundPosition='right';document.body.style.backgroundColor='#FEF7EF';var mainhead=document.getElementById('mainHeader');mainhead.style.backgroundColor='#B93F44';mainhead.style.background='#B93F44';};var setBugCopy=function setBugCopy(){console.log('setBugCopy: ');var a1=document.getElementsByClassName('dynamic');Array.prototype.map.call(a1,function(fatherItem){var a2=fatherItem.getElementsByClassName('label label-id');var a3=Array.prototype.map.call(a2,function(el){return el.innerText;});var bugAry=noRepeat(a3);var dynamicDate=fatherItem.getElementsByClassName('dynamic-date');if(dynamicDate[0]&&dynamicDate[0].childNodes.length<=7){var timeline=fatherItem.getElementsByClassName('timeline');var oldButton=document.createElement('div');oldButton.id='copyButton';var Button=bugAry.length===0?/*#__PURE__*/(0,jsx_runtime.jsx)("button",{style:{textAlign:'center',marginTop:5},children:"\u6682\u65E0bug"}):/*#__PURE__*/(0,jsx_runtime.jsxs)("button",{style:{marginTop:5,textAlign:'center'},onClick:function onClick(){return copyUrl(bugAry.join(','));},children:["\u5F53\u5929\u4FEE\u6539\u7684bug",/*#__PURE__*/(0,jsx_runtime.jsx)("br",{}),"(",bugAry.length,")"]});dynamicDate[0].style.height='105px';timeline[0].style.marginBottom='56px';react_dom.render(Button,oldButton);dynamicDate[0].appendChild(oldButton);}});};var setButton=function setButton(classname,iconUrl){var a1=document.getElementsByClassName(classname);if(a1&&a1[0]){var icon=/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:Array.from({length:10}).map(function(e,index){return/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"scyIcon",src:__webpack_require__(810)("./".concat(iconUrl,".png")),alt:"",style:{transform:"rotate(".concat(Math.random()*100-50,"deg)"),animationDuration:"".concat(Math.random()*1+1,"s"),animationDelay:"".concat(Math.random()*4-1,"s")}});})});react_dom.render(icon,a1[0]);}};(0,react.useEffect)(function(){setTheme();setBugCopy();setFlag(localStorage.getItem('shade'));// 解决
+setButton('icon-bug-resolve','icon11');// 指派
+setButton('icon-bug-assignTo','icon4');// 激活
+setButton('icon-bug-activate','cry');// 关闭
+setButton('icon-bug-close','icon10');// 确认
+setButton('icon-bug-confirmBug','icon3');},[]);return/*#__PURE__*/react_dom.createPortal(/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"scyswitch",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",className:"scyinput",id:"switch",checked:flag==='1'}),/*#__PURE__*/(0,jsx_runtime.jsx)("label",{for:"switch",className:"scylabel",onClick:function onClick(){var oldflag=localStorage.getItem('shade');var newFlag=oldflag==='1'?'0':'1';setFlag(newFlag);localStorage.setItem('shade',newFlag);},children:"Toggle"})]}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"shadeWrapper",style:{display:flag==='1'?'initial':'none'},children:Array.from({length:20}).map(function(e,index){return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"animation",style:{// top: `${Math.random() * 100}vh`,
 left:"".concat(Math.random()*100+0,"vw"),animationDuration:"".concat(Math.random()*5+15,"s"),animationDelay:"".concat(Math.random()*20+0,"s")},children:/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:__webpack_require__(67)("./icon".concat([index%10+1],".png")),className:"scybox",alt:""})},"anim".concat(index+1));})})]}),document.body);}/* harmony default export */ var src_App_0 = (App_App);
 ;// CONCATENATED MODULE: ./src/index.js
 log("React script has successfully started");// Do required initial work. Gets called every time the URL changes,

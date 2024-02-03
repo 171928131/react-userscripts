@@ -89,7 +89,7 @@ function App() {
     setBugCopy();
     setFlag(localStorage.getItem('shade'))
     // 解决
-    setButton('icon-bug-resolve', 'icon8');
+    setButton('icon-bug-resolve', 'icon11');
     // 指派
     setButton('icon-bug-assignTo', 'icon4');
     // 激活
